@@ -1,4 +1,3 @@
-/* إعداد عام */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,7 @@ body {
     color: #333;
 }
 
-/* الهيدر (مطابق للشوب) */
+/* الهيدر  */
 .navbar {
     background-color: #c9bab6;
     height: 110px;
