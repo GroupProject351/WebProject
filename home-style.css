@@ -1,0 +1,220 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #fcfaf7;
+    color: #333;
+}
+
+/* الهيدر */
+.navbar {
+    background-color: #c9bab6;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.navbar nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.nav-spacer {
+    flex: 1;
+    text-align: left;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-spacer i {
+    color: #585252;
+}
+
+.hero-section {
+    padding: 40px 5%;
+}
+
+.main-content-wrapper {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.main-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+/* الكاردز*/
+.card {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.card {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 50%, rgba(0,0,0,0.7));
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+
+.card h3 {
+    font-family: 'Great Vibes', cursive;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+.card-btn {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.main-cta-btn {
+    background-color: #7a2021;
+    color: #fff;
+    padding: 15px 50px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-top: 40px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.card {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.main-cta-btn:hover {
+    background: #5c1616;
+    transform: scale(1.05);
+}
+.main-footer {
+    background-color: #c9bab6;
+    padding: 60px 5% 20px;
+    margin-top: 80px;
+    position: relative;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #1a1a1a;
+    font-size: 2rem;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 1.0rem;
+    font-weight: 800;
+}
+
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pay-icon {
+    height: 50px; 
+    width: auto;
+}
+
+
+.copyright {
+    text-align: right;
+    margin-top: 40px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
