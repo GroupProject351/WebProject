@@ -1,4 +1,3 @@
-/* إعداد عام */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,7 @@ body {
     color: #333;
 }
 
-/* الهيدر */
+
 .navbar {
     background-color: #c9bab6;
     height: 110px;
@@ -54,7 +53,7 @@ body {
 .nav-spacer i {
     color: #585252;
 }
-/* المتجر */
+
 .shop-container {
     width: 90%;
     margin: 30px auto;
@@ -74,14 +73,13 @@ body {
     color: #777;
 }
 
-/* layout */
 .shop-layout {
     display: grid;
     grid-template-columns: 200px 1fr;
     gap: 30px;
 }
 
-/* الفلاتر */ 
+
 .filters h3 { 
     font-size: 1.8rem; 
     margin-bottom: 20px; 
@@ -117,7 +115,7 @@ body {
     transition: 0.3s; 
 }
 
-/* المنتجات */
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
