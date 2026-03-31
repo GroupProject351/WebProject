@@ -11,7 +11,7 @@ body {
     direction: rtl;
 }
 
-/* ====== الهيدر (نفس الهوم) ====== */
+
 .navbar {
     background-color: #c9bab6;
     height: 110px;
@@ -21,22 +21,26 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
+/* اللوقو */
 .logo img {
     height: 100px;
 }
 
+/* الناف في النص */
 .navbar nav {
     flex: 2;
     display: flex;
     justify-content: center;
 }
 
+/* القائمة */
 .navbar nav ul {
     display: flex;
     list-style: none;
     gap: 30px;
 }
 
+/* الروابط */
 .navbar nav ul li a {
     text-decoration: none;
     color: #1a1a1a;
@@ -44,7 +48,21 @@ body {
     font-weight: 800;
 }
 
-/* ====== صفحة الدفع (ستايلك أنتِ) ====== */
+/* السلة */
+.nav-spacer {
+    flex: 1;
+    text-align: left;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.nav-spacer i {
+    color: #585252;
+}
+
+
+/* ====== صفحة الدفع ====== */
 
 /* عنوان الصفحة */
 .title {
@@ -99,11 +117,11 @@ input {
     border: 1px solid #ccc;
 }
 
-/* الزر (نفس لونك أنتِ) */
+/* الزر */
 button {
     width: 100%;
     padding: 12px;
-    background-color: #8B5E3C; /* نفس تصميمك */
+    background-color: #8B5E3C;
     color: white;
     border: none;
     margin-top: 15px;
