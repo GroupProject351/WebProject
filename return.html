@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Return</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="return.css">
+</head>
+
+<body>
+
+<header class="navbar">
+        <div class="logo">
+            <img src="https://i.ibb.co/Vpqp8P3N/image.png" alt="رونق">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home page.html">الرئيسية</a></li>
+                <li><a href="#" class="active">من نحن</a></li>
+                <li><a href="shop.html">المتجر</a></li>
+                <li><a href="FAQ.html">الأسئلة الشائعة</a></li>
+                <li><a href="return.html">طلبات الأسترجاع</a></li>
+            </ul>
+        </nav>
+        <div class="nav-spacer">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </header>
+
+<main class="container">
+
+<section class="box">
+<h2>سياسة الاسترجاع</h2>
+
+<ul>
+<li>يتم قبول الاسترجاع خلال 7 أيام</li>
+<li>يجب أن تكون المنتجات غير مستخدمة</li>
+<li>يتم استرجاع الأموال بنفس طريقة الدفع</li>
+</ul>
+
+</section>
+
+<section class="box">
+<h2>طلب الاسترجاع</h2>
+
+<form>
+<div class="form-group">
+    <label>الاسم *</label>
+    <input type="text" required>
+</div>
+
+<div class="form-group">
+    <label>رقم الطلب *</label>
+    <input type="text" required>
+</div>
+
+<div class="form-group">
+    <label>اختر السبب *</label>
+    <select required>
+        <option value="" disabled selected>-- اختر السبب --</option>
+        <option>مقاس غير مناسب</option>
+        <option>منتج تالف</option>
+        <option>أخرى</option>
+    </select>
+</div>
+
+<button type="button" onclick="alert('تم إرسال الطلب')">إرسال</button>
+</form>
+
+</section>
+
+</main>
+
+</body>
+</html>
