@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif; 
+}
+
+body {
+    background-color: #fcfaf7;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: #c9bab6; 
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 90px;
+}
+
+.navbar nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 1.5rem; 
+    font-weight: 700;
+}
+
+.nav-spacer {
+    flex: 1;
+    text-align: left;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.hero-section {
+    padding: 40px 5%;
+}
+
+.main-content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-banner-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.about-banner-img {
+    width: 100%;
+    display: block;
+}
+
+.about-content-text {
+    text-align: right; 
+    width: 100%;
+    max-width: 1100px;
+}
+
+.main-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.about-content-text p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+.slogan-text {
+    text-align: center; 
+    font-size: 1.0rem;   
+    font-weight: 800;   
+    color: #1a1a1a;     
+    margin-top: 40px;
+    width: 100%;
+    display: block;
+}
+
+.main-footer {
+    background-color: #c9bab6;
+    padding: 60px 5% 20px;
+    margin-top: 80px;
+    position: relative;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #1a1a1a;
+    font-size: 2rem;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 1.0rem;
+    font-weight: 800;
+}
+
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pay-icon {
+    height: 50px; 
+    width: auto;
+}
+
+
+.copyright {
+    text-align: right;
+    margin-top: 40px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
