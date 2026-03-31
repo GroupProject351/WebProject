@@ -138,3 +138,59 @@ button {
 button:hover {
     background-color: #6e472d;
 }
+.main-footer {
+    background-color: #c9bab6;
+    padding: 60px 5% 20px;
+    margin-top: 80px;
+    position: relative;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #1a1a1a;
+    font-size: 2rem;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 1.0rem;
+    font-weight: 800;
+}
+
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pay-icon {
+    height: 50px; 
+    width: auto;
+}
+
+
+.copyright {
+    text-align: right;
+    margin-top: 40px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #1a1a1a;
+}
