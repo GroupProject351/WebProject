@@ -50,6 +50,10 @@ body {
     cursor: pointer;
 }
 
+.nav-spacer i {
+    color: #585252;
+}
+
 .hero-section {
     padding: 40px 5%;
 }
