@@ -26,7 +26,7 @@ body {
     height: 100px;
 }
 
-/* الناف في النص */
+
 .navbar nav {
     flex: 2;
     display: flex;
@@ -75,14 +75,12 @@ body {
     font-weight: bold;
 }
 
-/* الحاوية */
 .container {
     width: 90%;
     max-width: 700px;
     margin: 30px auto;
 }
 
-/* الكروت */
 .box {
     background: #ffffff;
     padding: 25px;
@@ -90,7 +88,6 @@ body {
     border-radius: 12px;
 }
 
-/* العناوين */
 h1, h2 {
     text-align: center;
     color: #8B5E3C;
@@ -108,7 +105,6 @@ h1, h2 {
     width: 70px;
 }
 
-/* الفورم */
 input {
     width: 100%;
     padding: 12px;
@@ -117,7 +113,6 @@ input {
     border: 1px solid #ccc;
 }
 
-/* الزر */
 button {
     width: 100%;
     padding: 12px;
