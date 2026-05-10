@@ -9,14 +9,17 @@ body {
     background-color: #fcfaf7;
     color: #333;
     direction: rtl;
+    line-height: 1.8;
 }
 
+/* ===== HEADER ===== */
 
 .navbar {
     background-color: #c9bab6;
     height: 110px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 5%;
     border-bottom: 1px solid #ddd;
 }
@@ -33,6 +36,7 @@ body {
 
 .navbar nav ul {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 30px;
 }
@@ -40,40 +44,58 @@ body {
 .navbar nav ul li a {
     text-decoration: none;
     color: #1a1a1a;
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+    padding-bottom: 5px;
 }
 
+.navbar nav ul li a:hover {
+    color: #7a2021;
+}
+
+.navbar nav ul li a.active {
+    color: #7a2021;
+    border-bottom: 2px solid #7a2021;
+}
 
 .nav-spacer {
     flex: 1;
     text-align: left;
-    font-size: 1.5rem;
-    cursor: pointer;
 }
 
-.nav-spacer i {
+.nav-spacer a {
     color: #585252;
+    font-size: 1.7rem;
+    transition: 0.3s ease;
 }
 
-/* ====== عنوان الصفحة ====== */
+.nav-spacer a:hover {
+    color: #7a2021;
+}
+
+.container {
+    padding: 40px 5% 0;
+}
+
 .title {
-    background-color: #8B5E3C;
-    color: white;
+    width: 90%;
+    margin: 30px auto 40px;   
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-    font-size: 1.8rem;
-    font-weight: bold;
+    background-color: #c9bab6; 
+    color: #1a1a1a;            
+    padding: 20px 0;           
+    font-size: 2.2rem;         
+    font-weight: 700;          
+    border-bottom: 1px solid #ddd; 
+    border-radius: 10px;      
 }
-
 
 .container {
     width: 90%;
     max-width: 700px;
     margin: 30px auto;
 }
-
 
 .box {
     background: #ffffff;
@@ -115,11 +137,11 @@ input, select {
     font-size: 14px;
 }
 
-
-input:focus, select:focus {
+input:focus,
+select:focus {
     outline: none;
-    border-color: #8B5E3C;
-    box-shadow: 0 0 5px rgba(139, 94, 60, 0.3);
+    border-color: #7a2021;
+    box-shadow: 0 4px 10px rgba(122, 32, 33, 0.15);
 }
 
 
