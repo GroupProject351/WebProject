@@ -57,6 +57,10 @@ body {
     border-bottom: 2px solid #7a2021;
 }
 
+.navbar nav ul li a.active {
+    color: #7a2021;
+    border-bottom: 2px solid #7a2021;
+}
 
 .nav-spacer {
     flex: 1;
@@ -73,24 +77,10 @@ body {
     color: #7a2021;
 }
 
-.container {
+/* ===== CONTENT ===== */
+
+.return-container {
     padding: 40px 5% 0;
-}
-
-.title {
-    width: 90%;
-    margin: 30px auto 40px;   
-    text-align: center;
-    background-color: #c9bab6; 
-    color: #1a1a1a;            
-    padding: 20px 0;           
-    font-size: 2.2rem;         
-    font-weight: 700;          
-    border-bottom: 1px solid #ddd; 
-    border-radius: 10px;      
-}
-
-.container {
     width: 90%;
     max-width: 700px;
     margin: 30px auto;
@@ -103,19 +93,15 @@ body {
     border-radius: 12px;
 }
 
-
 h1, h2 {
     text-align: center;
     color: inherit;
-
 }
-
 
 ol {
     margin-top: 10px;
     line-height: 2;
 }
-
 
 .form-group {
     display: flex;
@@ -127,7 +113,6 @@ ol {
     margin-bottom: 5px;
     font-size: 14px;
 }
-
 
 input, select {
     width: 100%;
@@ -144,7 +129,6 @@ select:focus {
     box-shadow: 0 4px 10px rgba(122, 32, 33, 0.15);
 }
 
-
 button {
     width: 100%;
     padding: 12px;
@@ -158,8 +142,11 @@ button {
 }
 
 button:hover {
-    background-color: #6e472d;
+    background-color: #5c1616;
 }
+
+/* ===== FOOTER ===== */
+
 .main-footer {
     background-color: #c9bab6;
     padding: 60px 5% 20px;
@@ -192,10 +179,9 @@ button:hover {
 .footer-links a {
     text-decoration: none;
     color: #1a1a1a;
-    font-size: 1.0rem;
+    font-size: 1rem;
     font-weight: 800;
 }
-
 
 .payment-methods {
     display: flex;
@@ -204,10 +190,9 @@ button:hover {
 }
 
 .pay-icon {
-    height: 50px; 
+    height: 50px;
     width: auto;
 }
-
 
 .copyright {
     text-align: right;
