@@ -55,6 +55,11 @@ body {
     border-bottom: 2px solid #7a2021;
 }
 
+.navbar nav ul li a.active {
+    color: #7a2021;
+    border-bottom: 2px solid #7a2021;
+}
+
 .nav-spacer {
     flex: 1;
     text-align: left;
