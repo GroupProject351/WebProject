@@ -189,30 +189,3 @@ body {
     color: #1a1a1a;
 }
 
-
-
-[dir="ltr"] .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%;
-    box-sizing: border-box;
-}
-
-[dir="ltr"] nav {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-[dir="ltr"] .nav-spacer {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    min-width: 120px;
-    justify-content: flex-end;
-}
-
-[dir="ltr"] .logo {
-    min-width: 120px;
-}
