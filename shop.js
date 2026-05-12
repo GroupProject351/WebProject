@@ -1,37 +1,35 @@
 // ===============================
-// 1. تحميل السلة من LocalStorage
+// تحميل السلة من LocalStorage
 // ===============================
 let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 
+
 // ===============================
-// 2. تحديث شكل الزر (بصرياً فقط)
+// تحديث عدّاد السلة بجانب الأيقونة
 // ===============================
-function enableAdd(select) {
-    // نجد الزر الذي يتبع قائمة المقاسات مباشرة
-    let btn = select.nextElementSibling;
-    
-    if (select.value !== "") {
-        btn.style.opacity = "1";
-        btn.style.cursor = "pointer";
-    } else {
-        btn.style.opacity = "0.3";
-        btn.style.cursor = "default";
+function updateCartCount() {
+    let count = 0;
+
+    cart.forEach(item => {
+        count += item.qty;
+    });
+
+    const badge = document.getElementById("cartCount");
+    if (badge) {
+        badge.textContent = count;
     }
-    // ملاحظة: لم نضع btn.disabled = true لكي نتمكن من إظهار رسالة التنبيه عند الضغط
 }
 
+
 // ===============================
-// 3. إضافة منتج للسلة مع التحقق من المقاس
+// إضافة منتج للسلة
 // ===============================
 function addToCart(id, name, price, size = null) {
-    
-    // التحقق: إذا كان المنتج يتطلب مقاساً (ليس أساور رقم 1) والمقاس الممرر فارغ
-    if (id !== 1 && (size === "" || size === null || size === "null" || size === undefined)) { 
-        alert("يرجى اختيار المقاس أولاً ⚠️");
-        return; // التوقف وعدم الإضافة للسلة
-    }
 
-    const item = cart.find(p => p.productId === id && p.size === size);
+    const item = cart.find(p =>
+        p.productId === id &&
+        p.size === size
+    );
 
     if (item) {
         item.qty++;
@@ -40,60 +38,30 @@ function addToCart(id, name, price, size = null) {
             productId: id,
             name: name,
             price: price,
-            size: size || "حجم واحد",
+            size: size,
             qty: 1
         });
     }
 
     localStorage.setItem("shoppingCart", JSON.stringify(cart));
-    alert(`تمت إضافة (${name}) للسلة بنجاح 🛒`);
+
+    updateCartCount(); // تحديث العدد
+
+    alert("تمت إضافة المنتج للسلة 🛒");
 }
 
+
 // ===============================
-// 4. نظام الفلترة (Filtering System)
+// تفعيل زر الإضافة عند اختيار المقاس
 // ===============================
-const categoryFilters = document.querySelectorAll('.filter-category');
-const sizeFilters = document.querySelectorAll('.filter-size');
-const products = document.querySelectorAll('.product-card');
+function enableAdd(select) {
+    let btn = select.parentElement.querySelector(".add-to-cart-btn");
 
-function filterProducts() {
-    const selectedCategories = Array.from(categoryFilters).filter(input => input.checked).map(input => input.value);
-    const selectedSizes = Array.from(sizeFilters).filter(input => input.checked).map(input => input.value);
-
-    products.forEach(product => {
-        const productCategory = product.getAttribute('data-category');
-        const productSizes = product.getAttribute('data-sizes').split(',');
-
-        const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(productCategory);
-        const sizeMatch = selectedSizes.length === 0 || selectedSizes.some(s => productSizes.includes(s));
-
-        product.style.display = (categoryMatch && sizeMatch) ? "block" : "none";
-    });
+    btn.disabled = select.value === "";
 }
 
-categoryFilters.forEach(filter => filter.addEventListener('change', filterProducts));
-sizeFilters.forEach(filter => filter.addEventListener('change', filterProducts));
 
-// تلوين مربعات المقاسات في الفلتر
-sizeFilters.forEach(input => {
-    input.addEventListener('change', function() {
-        if (this.checked) {
-            this.nextElementSibling.style.backgroundColor = "#7a2021";
-            this.nextElementSibling.style.color = "white";
-        } else {
-            this.nextElementSibling.style.backgroundColor = "transparent";
-            this.nextElementSibling.style.color = "#333";
-        }
-    });
-});
-
-// مسح الفلاتر
-document.getElementById('clearFilters').addEventListener('click', function() {
-    categoryFilters.forEach(filter => filter.checked = false);
-    sizeFilters.forEach(filter => {
-        filter.checked = false;
-        filter.nextElementSibling.style.backgroundColor = "transparent";
-        filter.nextElementSibling.style.color = "#333";
-    });
-    products.forEach(product => product.style.display = "block");
-});
+// ===============================
+// تشغيل عند فتح الصفحة
+// ===============================
+updateCartCount();
