@@ -57,7 +57,6 @@ body {
     border-bottom: 2px solid #7a2021;
 }
 
-
 .nav-spacer {
     flex: 1;
     text-align: left;
@@ -80,6 +79,9 @@ select:focus {
     box-shadow: 0 4px 10px rgba(122, 32, 33, 0.15);
 }
 
+/* ====== صفحة الدفع ====== */
+
+/* عنوان الصفحة */
 .title {
     background-color: #8B5E3C;
     color: white;
@@ -97,6 +99,28 @@ select:focus {
     margin: 30px auto;
 }
 
+.input-error {
+    border-color: red;
+}
+
+.input-success {
+    border-color: green;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    height: 14px;
+    margin-top: 3px;
+}
+
+.hint {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+
 .box {
     background: #ffffff;
     padding: 25px;
@@ -107,6 +131,112 @@ select:focus {
 h1, h2 {
     text-align: center;
     color: inherit;
+}
+
+/* ===== عنصر السلة ===== */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    gap: 15px;
+    direction: rtl; /* مهم لأنه عربي */
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    background: #7a2021; /* لون الثيم */
+    color: white;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+
+/* ===== معلومات المنتج (يمين) ===== */
+.item-info {
+    flex: 2;
+    text-align: right;
+    font-size: 15px;
+    color: #333;
+}
+
+/* ===== أزرار + و - (وسط) ===== */
+.qty-controls {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.qty-btn {
+    background: #7a2021; /* لون الثيم */
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.qty-btn:hover {
+    background: #5e191a;
+}
+
+/* ===== زر الحذف (يسار) ===== */
+.remove-btn {
+    flex: 0.7;
+    background: #c0392b; /* أحمر حذف */
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.remove-btn:hover {
+    background: #992d22;
+}
+
+.clear-btn {
+    background: #7a2021;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 15px;
+    transition: 0.2s;
+}
+
+.clear-btn:hover {
+    background: #5e191a;
+}
+
+
+/* ===== الإجمالي ===== */
+#total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: left;
+    color: #7a2021;
 }
 
 /* الشعارات */
