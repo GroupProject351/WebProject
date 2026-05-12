@@ -77,6 +77,23 @@ body {
     color: #7a2021;
 }
 
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    background: #7a2021; /* لون الثيم */
+    color: white;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+
 /* ===== CONTENT ===== */
 
 .return-container {
@@ -88,10 +105,39 @@ body {
 
 .box {
     background: #ffffff;
-    padding: 25px;
-    margin-top: 25px;
     border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: 0.3s ease;
+    overflow: hidden;
+    max-height: 60px; /* مغلق */
 }
+
+
+.box.open {
+    max-height: 600px; /* مفتوح */
+}
+
+.box * {
+    line-height: 1.9;
+}
+
+
+.box h2 {
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+}
+
+.input-error {
+    border: 1px solid red;
+}
+
 
 h1, h2 {
     text-align: center;
