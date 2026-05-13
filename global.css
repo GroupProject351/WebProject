@@ -402,3 +402,124 @@ html[dir="ltr"] .about-content-text {
 .popup-overlay.active {
     display: flex;             /* only shows when JS adds this class */
 }
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px 5%;
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .navbar nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 1rem;
+    }
+
+    .nav-spacer {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-spacer .btnLogin-popup {
+        margin-right: 0;
+    }
+
+    /* LOGIN POPUP */
+    .wrapper {
+        width: 90%;
+    }
+
+    /* FOOTER */
+    .main-footer {
+        padding: 30px 5% 20px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+}
+
+/* ================= SHOP PAGE ================= */
+
+@media (max-width: 768px) {
+
+    .shop-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        order: 2;
+    }
+
+    .products-grid {
+        order: 1;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+
+    .product-image {
+        height: 220px;
+    }
+}
+
+/* ================= PAYMENT PAGE ================= */
+
+@media (max-width: 768px) {
+
+    .payment-container {
+        width: 95%;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* ================= ABOUT PAGE ================= */
+
+@media (max-width: 768px) {
+
+    .about-content-text {
+        padding: 0 10px;
+    }
+
+    .main-title {
+        font-size: 1.6rem;
+    }
+}
+
+/* ================= FAQ & RETURN PAGES ================= */
+
+@media (max-width: 768px) {
+
+    #container1,
+    .return-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .question {
+        font-size: 14px;
+    }
+}
