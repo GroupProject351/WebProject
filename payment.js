@@ -84,6 +84,8 @@ function saveOrder(name, phone, cart, total) {
 renderCart();
 updateCartCount();
 
+/* ================= VALIDATION ================= */
+
 function validateName(name) {
     if (!name) return "الاسم مطلوب";
     if (name.length < 3) return "الاسم يجب أن يكون 3 أحرف على الأقل";
@@ -111,6 +113,29 @@ function clearError(id) {
     document.getElementById(id).classList.remove("input-error");
     document.getElementById(id + "Error").textContent = "";
 }
+
+/* ================= REAL‑TIME VALIDATION ================= */
+
+document.getElementById("name").addEventListener("input", function () {
+    const error = validateName(this.value.trim());
+    if (error) showError("name", error);
+    else clearError("name");
+});
+
+document.getElementById("card").addEventListener("input", function () {
+    const value = this.value.replace(/\s+/g, "");
+    const error = validateCard(value);
+    if (error) showError("card", error);
+    else clearError("card");
+});
+
+document.getElementById("phone").addEventListener("input", function () {
+    const error = validatePhone(this.value.trim());
+    if (error) showError("phone", error);
+    else clearError("phone");
+});
+
+/* ================= SUBMIT ================= */
 
 document.getElementById("paymentForm").addEventListener("submit", function (e) {
     e.preventDefault();
