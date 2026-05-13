@@ -41,6 +41,60 @@
         </div>
     </header>
 
+
+    <div class="popup-overlay" id="loginOverlay">
+     <div class="wrapper">
+        <span class="icon-close" onclick="closeLogin()"><i class="fa-solid fa-xmark"></i></span>
+        
+        <div class="form-box login">
+            <h2>تسجيل الدخول</h2>
+            <form action="#">
+                <div class="input-box" >
+                     <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                     <input type="email" id="login-email" required>
+                     <label>البريد الإلكتروني</label>  
+                </div>
+                <div class="input-box" >
+                     <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                     <input type="password" id="login-password" required>
+                     <label>كلمة المرور</label>
+                </div>
+                <button type="submit" class="btn" id="login-btn">تسجيل الدخول</button>
+                <div class="login-register">
+                    <p>ليس لديك حساب؟ <a href="#" class="register-link">سجل الآن</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>تسجيل </h2>
+            <form action="#">
+                <div class="input-box" >
+                     <span class="icon"><i class="fa-solid fa-user"></i></span>
+                     <input type="text" id="reg-username" required>
+                     <label>اسم المستخدم</label>  
+                </div>
+                <div class="input-box" >
+                     <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                     <input type="email" id="reg-email" required>
+                     <label>البريد الإلكتروني</label>  
+                </div>
+                <div class="input-box" >
+                     <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                     <input type="password" id="reg-password" required>
+                     <label>كلمة المرور</label>
+                </div>
+                <button type="submit" class="btn" id="reg-btn" >تسجيل </button>
+                <div class="login-register">
+                    <p> لديك حساب بالفعل؟ <a href="#" class="login-link">تسجيل دخول</a></p>
+                </div>
+            </form>
+        </div>
+
+     </div>
+     </div>
+    
+
     <!-- ========== المحتوى الرئيسي ========== -->
     <main class="hero-section">
         <div class="main-content-wrapper">
@@ -96,6 +150,7 @@
 
     <script src="global.js"></script>
     <script src="language.js"></script>
+    <script src="login.js"></script>
 
 </body>
 </html>
