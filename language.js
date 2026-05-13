@@ -475,11 +475,11 @@ if (document.getElementById("payment_title")) {
 }
 
 function toggleLanguage() {
-
-  currentLang =
-    currentLang === "ar" ? "en" : "ar";
-
+  currentLang = currentLang === "ar" ? "en" : "ar";
   applyLanguage(currentLang);
+
+  // تحديث السلة بعد تغيير اللغة
+  if (typeof renderCart === "function") renderCart();
 }
 
 applyLanguage(currentLang);
