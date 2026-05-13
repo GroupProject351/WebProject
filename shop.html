@@ -22,7 +22,7 @@
 
         <nav>
             <ul>
-                <li><a id="nav_home" href="index.html">الرئيسية</a></li>
+                <li><a id="nav_home" href="home-page.html">الرئيسية</a></li>
                 <li><a id="nav_about" href="about.html">من نحن</a></li>
                 <li><a id="nav_shop" href="shop.html" class="active">المتجر</a></li>
                 <li><a id="nav_faq" href="FAQ.html">الأسئلة الشائعة</a></li>
@@ -37,63 +37,8 @@
             </a>
 
             <button onclick="toggleLanguage()" class="lang-btn">EN | AR</button>
-            <button class="btnLogin-popup" id="open_login_btn">تسجيل الدخول</button>
         </div>
     </header>
-
-
-    <div class="popup-overlay" id="loginOverlay">
-     <div class="wrapper">
-        <span class="icon-close" onclick="closeLogin()"><i class="fa-solid fa-xmark"></i></span>
-        
-        <div class="form-box login">
-            <h2 id="login_title">تسجيل الدخول</h2>
-            <form action="#">
-                <div class="input-box" >
-                     <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                     <input type="email" id="login-email" required>
-                     <label id="login_email_label">البريد الإلكتروني</label>  
-                </div>
-                <div class="input-box" >
-                     <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                     <input type="password" id="login-password" required>
-                     <label id="login_password_label">كلمة المرور</label>
-                </div>
-                <button type="submit" class="btn" id="login-btn">تسجيل الدخول</button>
-                <div class="login-register">
-                    <p id="login_no_account_text">ليس لديك حساب؟ <a href="#" class="register-link" id="register_now_link">سجل الآن</a></p>
-                </div>
-            </form>
-        </div>
-
-        <div class="form-box register">
-            <h2 id="register_title">تسجيل </h2>
-            <form action="#">
-                <div class="input-box" >
-                     <span class="icon"><i class="fa-solid fa-user"></i></span>
-                     <input type="text" id="reg-username" required>
-                     <label id="register_username_label">اسم المستخدم</label>  
-                </div>
-                <div class="input-box" >
-                     <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                     <input type="email" id="reg-email" required>
-                     <label id="register_email_label">البريد الإلكتروني</label>  
-                </div>
-                <div class="input-box" >
-                     <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                     <input type="password" id="reg-password" required>
-                     <label id="register_password_label">كلمة المرور</label>
-                </div>
-                <button type="submit" class="btn" id="reg-btn" >تسجيل </button>
-                <div class="login-register">
-                    <p id="already_have_account_text"> لديك حساب بالفعل؟ <a href="#" class="login-link">تسجيل دخول</a></p>
-                </div>
-            </form>
-        </div>
-
-     </div>
-     </div>
-    
 
     <!-- ========== محتوى المتجر ========== -->
     <main class="shop-container">
@@ -120,8 +65,7 @@
                     <h4 id="filter_size">المقاس</h4>
 
                     <div class="sizes">
-                        <label class="size-box"><input type="checkbox" class="filter-size" value="One Size" hidden><span>حجم واحد</span></label>
-                         <label class="size-box"><input type="checkbox" class="filter-size" value="S" hidden><span>S</span></label>
+                        <label class="size-box"><input type="checkbox" class="filter-size" value="S" hidden><span>S</span></label>
                         <label class="size-box"><input type="checkbox" class="filter-size" value="M" hidden><span>M</span></label>
                         <label class="size-box"><input type="checkbox" class="filter-size" value="L" hidden><span>L</span></label>
                         <label class="size-box"><input type="checkbox" class="filter-size" value="XL" hidden><span>XL</span></label>
@@ -132,62 +76,73 @@
             </aside>
 
             <!-- ========== المنتجات ========== -->
-            <section class="products-grid" id="productsGrid">
+<section class="products-grid" id="productsGrid">
 
-                <!-- المنتج 1 -->
-                <article class="product-card" data-category="أكسسوارات" data-sizes="One Size">
-                    <div class="product-image" style="background-image: url('https://images.pexels.com/photos/11310658/pexels-photo-11310658.jpeg');">
-                        <span class="tag" id="tag_new">جديد</span>
-                        <button id="add_to_cart_1" class="add-to-cart-btn" onclick="addToCart(1, 'أساور يد', 100, 'حجم واحد')">إضافة للسلة</button>
-                    </div>
-                    <div class="product-info">
-                        <h4 id="prod_name_1">أساور يد</h4>
-                        <p class="price">100 <span id="currency_1">ر.س</span></p>
-                    </div>
-                </article>
+    <!-- المنتج 1 -->
+    <article class="product-card" data-category="أكسسوارات" data-sizes="One Size">
+        <div class="product-image" style="background-image: url('https://images.pexels.com/photos/11310658/pexels-photo-11310658.jpeg');">
+            <span class="tag" id="tag_new">جديد</span>
 
-                <!-- المنتج 2 -->
-                <article class="product-card" data-category="طقم قطعتين" data-sizes="S,M,L,XL">
-                    <div class="product-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1682546467129-904577b589a0?q=80&w=687&auto=format&fit=crop');">
+            <button id="add_to_cart_1" class="add-to-cart-btn"
+                onclick="addToCart(1, {ar:'أساور يد', en:'Hand Bracelets'}, 100, 'حجم واحد')">
+                إضافة للسلة
+            </button>
+        </div>
 
-                        <select class="size-select" onchange="enableAdd(this)">
-                            <option value="" id="select_size_text">اختر المقاس</option>
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                        </select>
+        <div class="product-info">
+            <h4 id="prod_name_1">أساور يد</h4>
+            <p class="price">100 <span id="currency_1">ر.س</span></p>
+        </div>
+    </article>
 
-                        <button id="add_to_cart_2" class="add-to-cart-btn" onclick="addToCart(2, 'طقم رسمي كلاسيك', 420, this.previousElementSibling.value)">إضافة للسلة</button>
-                    </div>
+    <!-- المنتج 2 -->
+    <article class="product-card" data-category="طقم قطعتين" data-sizes="S,M,L,XL">
+        <div class="product-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1682546467129-904577b589a0?q=80&w=687&auto=format&fit=crop');">
 
-                    <div class="product-info">
-                        <h4 id="prod_name_2">طقم رسمي كلاسيك</h4>
-                        <p class="price"><span id="prod_price_2">420</span> <span id="currency_2">ر.س</span></p>
-                    </div>
-                </article>
+            <select class="size-select" onchange="enableAdd(this)">
+                <option value="" id="select_size_text">اختر المقاس</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
 
-                <!-- المنتج 3 -->
-                <article class="product-card" data-category="معاطف" data-sizes="S,M,L">
-                    <div class="product-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1675186049366-64a655f8f537?q=80&w=687&auto=format&fit=crop');">
+            <button id="add_to_cart_2" class="add-to-cart-btn"
+                onclick="addToCart(2, {ar:'طقم رسمي كلاسيك', en:'Classic Formal Set'}, 420, this.previousElementSibling.value)">
+                إضافة للسلة
+            </button>
+        </div>
 
-                        <select class="size-select" onchange="enableAdd(this)">
-                            <option value="" id="select_size_text">اختر المقاس</option>
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                        </select>
+        <div class="product-info">
+            <h4 id="prod_name_2">طقم رسمي كلاسيك</h4>
+            <p class="price"><span id="prod_price_2">420</span> <span id="currency_2">ر.س</span></p>
+        </div>
+    </article>
 
-                        <button id="add_to_cart_3" class="add-to-cart-btn" onclick="addToCart(3, 'معطف أحمر', 290, this.previousElementSibling.value)">إضافة للسلة</button>
-                    </div>
+    <!-- المنتج 3 -->
+    <article class="product-card" data-category="معاطف" data-sizes="S,M,L">
+        <div class="product-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1675186049366-64a655f8f537?q=80&w=687&auto=format&fit=crop');">
 
-                    <div class="product-info">
-                        <h4 id="prod_name_3">معطف أحمر</h4>
-                        <p class="price"><span id="prod_price_3">290</span> <span id="currency_3">ر.س</span></p>
-                    </div>
-                </article>
+            <select class="size-select" onchange="enableAdd(this)">
+                <option value="" id="select_size_text">اختر المقاس</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+            </select>
 
-            </section>
+            <button id="add_to_cart_3" class="add-to-cart-btn"
+                onclick="addToCart(3, {ar:'معطف أحمر', en:'Red Coat'}, 290, this.previousElementSibling.value)">
+                إضافة للسلة
+            </button>
+        </div>
+
+        <div class="product-info">
+            <h4 id="prod_name_3">معطف أحمر</h4>
+            <p class="price"><span id="prod_price_3">290</span> <span id="currency_3">ر.س</span></p>
+        </div>
+    </article>
+
+</section>
 
 
         </div>
@@ -224,7 +179,6 @@
     <script src="global.js"></script>
     <script src="shop.js"></script>
     <script src="language.js"></script>
-    <script src="login.js"></script>
 
 </body>
 </html>
