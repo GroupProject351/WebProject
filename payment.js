@@ -1,6 +1,7 @@
 let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 let total = 0;
 
+/* ================= تحديث عداد السلة ================= */
 function updateCartCount() {
     let count = 0;
     cart.forEach(item => count += item.qty);
@@ -8,6 +9,7 @@ function updateCartCount() {
     if (badge) badge.textContent = count;
 }
 
+/* ================= عرض السلة مع الترجمة ================= */
 function renderCart() {
     const container = document.getElementById("cartItems");
     const totalBox = document.getElementById("total");
@@ -16,15 +18,30 @@ function renderCart() {
     total = 0;
 
     cart.forEach((item, index) => {
+
         total += item.price * item.qty;
+
+        // ترجمة كلمة المقاس
+        const sizeLabel = currentLang === "ar" ? "المقاس" : "Size";
+
+        // ترجمة زر الحذف
+        const deleteText = currentLang === "ar" ? "حذف" : "Delete";
+
+        // ترجمة العملة
+        const currency = currentLang === "ar" ? "ر.س" : "SAR";
+
+        // ترجمة اسم المنتج
+        const productName = item.name_translated
+            ? item.name_translated[currentLang]
+            : item.name; // fallback للمنتجات القديمة
 
         container.innerHTML += `
             <div class="cart-item">
                 <div>
-                    <strong>${item.name}</strong>
-                    ${item.size ? `<span> - المقاس: ${item.size}</span>` : ""}
+                    <strong>${productName}</strong>
+                    ${item.size ? `<span> - ${sizeLabel}: ${item.size}</span>` : ""}
                     <br>
-                    <span>${item.price} ر.س</span>
+                    <span>${item.price} ${currency}</span>
                 </div>
 
                 <div class="actions">
@@ -34,16 +51,23 @@ function renderCart() {
                         <button class="qty-btn" onclick="increase(${index})">+</button>
                     </div>
 
-                    <button class="remove-btn" onclick="removeItem(${index})">حذف</button>
+                    <button class="remove-btn" onclick="removeItem(${index})">${deleteText}</button>
                 </div>
             </div>
         `;
     });
 
-    totalBox.textContent = "الإجمالي: " + total + " ر.س";
+    // ترجمة كلمة الإجمالي
+    const totalLabel = currentLang === "ar" ? "الإجمالي" : "Total";
+    const currency = currentLang === "ar" ? "ر.س" : "SAR";
+    
+    totalBox.textContent = `${totalLabel}: ${total} ${currency}`;
+
+
     updateCartCount();
 }
 
+/* ================= تعديل الكمية ================= */
 function increase(i) {
     cart[i].qty++;
     saveAndRender();
@@ -71,6 +95,7 @@ function saveAndRender() {
     renderCart();
 }
 
+/* ================= حفظ الطلب ================= */
 function saveOrder(name, phone, cart, total) {
     let orders = JSON.parse(localStorage.getItem("orders")) || [];
     orders.push({
@@ -86,23 +111,41 @@ function saveOrder(name, phone, cart, total) {
 renderCart();
 updateCartCount();
 
-/* ================= VALIDATION ================= */
+/* ================= VALIDATION (ثنائي اللغة) ================= */
 
 function validateName(name) {
-    if (!name) return "الاسم مطلوب";
-    if (name.length < 3) return "الاسم يجب أن يكون 3 أحرف على الأقل";
+    if (!name)
+        return currentLang === "ar" ? "الاسم مطلوب" : "Name is required";
+
+    if (name.length < 3)
+        return currentLang === "ar"
+            ? "الاسم يجب أن يكون 3 أحرف على الأقل"
+            : "Name must be at least 3 characters";
+
     return "";
 }
 
 function validateCard(card) {
-    if (!card) return "رقم البطاقة مطلوب";
-    if (!/^[0-9]{16}$/.test(card)) return "رقم البطاقة يجب أن يكون 16 رقمًا";
+    if (!card)
+        return currentLang === "ar" ? "رقم البطاقة مطلوب" : "Card number is required";
+
+    if (!/^[0-9]{16}$/.test(card))
+        return currentLang === "ar"
+            ? "رقم البطاقة يجب أن يكون 16 رقمًا"
+            : "Card number must be 16 digits";
+
     return "";
 }
 
 function validatePhone(phone) {
-    if (!phone) return "رقم الجوال مطلوب";
-    if (!/^05[0-9]{8}$/.test(phone)) return "رقم الجوال يجب أن يبدأ بـ 05 ويتكون من 10 أرقام";
+    if (!phone)
+        return currentLang === "ar" ? "رقم الجوال مطلوب" : "Phone number is required";
+
+    if (!/^05[0-9]{8}$/.test(phone))
+        return currentLang === "ar"
+            ? "رقم الجوال يجب أن يبدأ بـ 05 ويتكون من 10 أرقام"
+            : "Phone number must start with 05 and be 10 digits";
+
     return "";
 }
 
@@ -166,5 +209,5 @@ document.getElementById("paymentForm").addEventListener("submit", function (e) {
     saveOrder(name, phone, cart, total);
     clearCart();
 
-    alert("تم الدفع بنجاح");
+    alert(currentLang === "ar" ? "تم الدفع بنجاح" : "Payment successful");
 });
