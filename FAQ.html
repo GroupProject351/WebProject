@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة - رونق</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="faq.css">
+</head>
+
+<body>
+
+    <!-- ========== الهيدر الموحد ========== -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="https://i.ibb.co/Vpqp8P3N/image.png" alt="رونق">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a id="nav_home" href="home-page.html">الرئيسية</a></li>
+                <li><a id="nav_about" href="about.html">من نحن</a></li>
+                <li><a id="nav_shop" href="shop.html">المتجر</a></li>
+                <li><a id="nav_faq" href="FAQ.html" class="active">الأسئلة الشائعة</a></li>
+                <li><a id="nav_return" href="return.html">طلبات الأسترجاع</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-spacer">
+            <a href="payment.html" class="cart-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cartCount" class="cart-count">0</span>
+            </a>
+
+            <button onclick="toggleLanguage()" class="lang-btn">EN | AR</button>
+        </div>
+    </header>
+
+    <!-- ========== محتوى الأسئلة الشائعة ========== -->
+    <main id="container1">
+
+        <h1 id="FAQ_title">الأسئلة الشائعة</h1>
+
+        <!-- سؤال 1 -->
+        <div class="card">
+            <button class="question" id="btn_q1">التوصيل</button>
+            <div class="answer" id="txt_a1">
+                <p><strong>كم مدة التوصيل؟</strong><br>مدة التوصيل من ٣ إلى ٥ أيام عمل.</p>
+                <p><strong>هل يتوفر شحن دولي؟</strong><br>حاليًا نشحن داخل المملكة العربية السعودية فقط.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 2 -->
+        <div class="card">
+            <button class="question" id="btn_q2">الاسترجاع</button>
+            <div class="answer" id="txt_a2">
+                <p><strong>متى يمكنني طلب الاسترجاع؟</strong><br>يتم رفع طلب الاسترجاع خلال ٧ أيام من الاستلام.</p>
+                <p><strong>ماهي المنتجات المسموح باسترجاعها؟</strong><br>المنتجات الغير مستخدمة فقط.</p>
+                <p><strong>كيف يتم استرجاع الأموال؟</strong><br>يتم استرجاع الأموال بنفس طريقة الدفع.</p>
+            </div>
+        </div>
+
+        <!-- سؤال 3 -->
+        <div class="card">
+            <button class="question" id="btn_q3">طرق الدفع</button>
+            <div class="answer" id="txt_a3">
+                <p><strong>ماهي وسائل الدفع المتاحة؟</strong><br>مدى، فيزا، Apple Pay.</p>
+                <p><strong>هل تتوفر خدمة الدفع عند الاستلام؟</strong><br>حاليًا الدفع إلكتروني فقط.</p>
+                <p><strong>ماذا أفعل إذا فشلت عملية الدفع؟</strong><br>يرجى التأكد من رصيد البطاقة أو التواصل مع الدعم.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ========== الفوتر الموحد ========== -->
+    <footer class="main-footer">
+        <div class="container">
+
+            <div class="footer-logo">
+                <img src="https://i.ibb.co/Vpqp8P3N/image.png" alt="Rawnaq Logo">
+            </div>
+
+            <div class="social-links">
+                <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/966545794428"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:2240006014@iau.edu.sa"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+
+            <div class="footer-links">
+                <a id="footer_return" href="return.html">الأسترجاع</a>
+            </div>
+
+            <div class="payment-methods">
+                <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" class="pay-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968144.png" class="pay-icon">
+                <img src="https://iconape.com/wp-content/files/sz/20472/png/Mada-01.png" class="pay-icon">
+            </div>
+
+            <p class="copyright">Rawnaq 2026 ©</p>
+        </div>
+    </footer>
+
+    <script src="global.js"></script>
+    <script src="faq.js"></script>
+    <script src="language.js"></script>
+
+</body>
+</html>
