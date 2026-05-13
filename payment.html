@@ -43,64 +43,64 @@
     <!-- ========== المحتوى الرئيسي ========== -->
     <main class="payment-container">
 
-        <h1 id="payment_title" class="payment-title">إتمام الدفع</h1>
+    <h1 class="payment-title" id="payment_title">إتمام الدفع</h1>
 
-        <!-- السلة -->
-        <div class="card">
-            <h2 id="cart_contents_title" class="section-title">محتويات السلة</h2>
-            <div id="cartItems"></div>
-            <h3 id="total"></h3>
-            <button id="clear_cart_btn" class="clear-btn" onclick="clearCart()">مسح السلة</button>
-        </div>
+    <!-- السلة -->
+    <div class="card">
+        <h2 class="section-title" id="cart_contents_title">محتويات السلة</h2>
+        <div id="cartItems"></div>
+        <h3 id="total"></h3>
+        <button class="clear-btn" id="clear_cart_btn" onclick="clearCart()">مسح السلة</button>
+    </div>
 
-        <!-- فورم الدفع -->
-        <div class="card">
-    <h2 id="payment_info_title" class="section-title">أدخل بيانات الدفع</h2>
+    <!-- فورم الدفع -->
+    <div class="card">
+        <h2 class="section-title" id="payment_info_title">أدخل بيانات الدفع</h2>
 
-    <form id="paymentForm" novalidate>
+        <form id="paymentForm" novalidate>
 
-        <!-- الاسم -->
-        <div class="form-group">
-            <label id="lbl_pay_name">الاسم *</label>
-            <p id="example_1" class="example">مثال: لمياء عبدالله اليامي</p>
-            <input type="text" id="name">
-            <small id="nameError" class="error"></small>
-        </div>
-
-        <!-- رقم البطاقة -->
-        <div class="form-group">
-            <label id="lbl_pay_card">رقم البطاقة *</label>
-            <p id="example_2" class="example">مثال: 1234 5678 9012 3456</p>
-            <input type="text" id="card">
-            <small id="cardError" class="error"></small>
-        </div>
-
-        <!-- رقم الجوال -->
-        <div class="form-group">
-            <label id="lbl_pay_phone">رقم الجوال *</label>
-            <p id="example_3" class="example">مثال: 05X XXX XXXX</p>
-            <input type="text" id="phone">
-            <small id="phoneError" class="error"></small>
-        </div>
-
-        <button id="pay_now_btn" type="submit" class="submit-btn">ادفع الآن</button>
-
-    </form>
-</div>
-
-
-        <!-- طرق الدفع -->
-        <div class="card">
-            <h2 id="payment_methods_title" class="section-title">طرق الدفع</h2>
-
-            <div class="logos">
-                <img src="https://i.ibb.co/HL290jjZ/Mada.png" alt="Mada">
-                <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968144.png" alt="Apple Pay">
+            <!-- الاسم -->
+            <div class="form-group">
+                <label id="lbl_pay_name">الاسم *</label>
+                <p class="example" id="example_1">مثال: لمياء عبدالله اليامي</p>
+                <input type="text" id="name">
+                <small id="nameError" class="error"></small>
             </div>
-        </div>
 
-    </main>
+            <!-- رقم البطاقة -->
+            <div class="form-group">
+                <label id="lbl_pay_card">رقم البطاقة *</label>
+                <p class="example" id="example_2">مثال: 1234 5678 9012 3456</p>
+                <input type="text" id="card">
+                <small id="cardError" class="error"></small>
+            </div>
+
+            <!-- رقم الجوال -->
+            <div class="form-group">
+                <label id="lbl_pay_phone">رقم الجوال *</label>
+                <p class="example" id="example_3">مثال: 05X XXX XXXX</p>
+                <input type="text" id="phone">
+                <small id="phoneError" class="error"></small>
+            </div>
+
+            <button type="submit" class="submit-btn" id="pay_now_btn">ادفع الآن</button>
+
+        </form>
+    </div>
+
+    <!-- طرق الدفع -->
+    <div class="card">
+        <h2 class="section-title" id="payment_methods_title">طرق الدفع</h2>
+
+        <div class="logos">
+            <img src="https://i.ibb.co/HL290jjZ/Mada.png" alt="Mada">
+            <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968144.png" alt="Apple Pay">
+        </div>
+    </div>
+
+</main>
+
 
     <!-- ========== الفوتر الموحد ========== -->
     <footer class="main-footer">
