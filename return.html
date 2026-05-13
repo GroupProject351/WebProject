@@ -14,7 +14,8 @@
 
 <body>
 
- <header class="navbar">
+    <!-- ========== الهيدر الموحد ========== -->
+    <header class="navbar">
         <div class="logo">
             <img src="https://i.ibb.co/Vpqp8P3N/image.png" alt="رونق">
         </div>
@@ -25,7 +26,7 @@
                 <li><a id="nav_about" href="about.html">من نحن</a></li>
                 <li><a id="nav_shop" href="shop.html">المتجر</a></li>
                 <li><a id="nav_faq" href="FAQ.html">الأسئلة الشائعة</a></li>
-                <li><a id="nav_return" href="return.html"class="active">طلبات الأسترجاع</a></li>
+                <li><a id="nav_return" href="return.html" class="active">طلبات الاسترجاع</a></li>
             </ul>
         </nav>
 
@@ -39,100 +40,100 @@
         </div>
     </header>
 
+    <!-- ========== المحتوى الرئيسي ========== -->
+    <main class="return-container">
 
-<main class="return-container">
+        <h1 id="return_title">طلبات الاسترجاع</h1>
 
-    <h1 id="return_title">طلبات الاسترجاع</h1>
+        <!-- سياسة الاسترجاع -->
+        <div class="card">
+            <button id="policy_btn" class="question">سياسة الاسترجاع</button>
 
-    <!-- سياسة الاسترجاع -->
-    <div class="card">
-        <button id="policy_btn" class="question">سياسة الاسترجاع</button>
-
-        <div id="policy_content" class="answer">
-            <ol>
-                <li>يتم قبول الاسترجاع خلال 7 أيام من تاريخ الاستلام.</li>
-                <li>يجب أن تكون المنتجات غير مستخدمة وبحالها الأصلية.</li>
-                <li>يتم استرجاع المبلغ بنفس طريقة الدفع.</li>
-            </ol>
-        </div>
-    </div>
-
-    <!-- طلب الاسترجاع -->
-    <div class="card">
-        <button id="form_title_btn" class="question">طلب الاسترجاع</button>
-
-        <div class="answer">
-
-            <form id="returnForm">
-
-                <div class="form-group">
-                    <label id="lbl_name">الاسم *</label>
-                    <input id="name" type="text">
-                    <small id="nameError" class="error"></small>
-                </div>
-
-                <div class="form-group">
-                    <label id="lbl_phone">رقم الجوال *</label>
-                    <input id="phone" type="text" placeholder="05XXXXXXXX">
-                    <small id="phoneError" class="error"></small>
-                </div>
-
-                <div class="form-group">
-                    <label id="lbl_order">رقم الطلب *</label>
-                    <input id="orderNumber" type="text" readonly placeholder="سيظهر تلقائيًا">
-                </div>
-
-                <div class="form-group">
-                    <label id="lbl_reason">اختر السبب *</label>
-                    <select id="reasonSelect" required>
-                        <option value="" disabled selected id="opt_default">-- اختر السبب --</option>
-                        <option id="opt_size">مقاس غير مناسب</option>
-                        <option id="opt_damaged">منتج تالف</option>
-                        <option id="opt_other">أخرى</option>
-                    </select>
-                </div>
-
-                <button id="submit_btn" type="submit">إرسال</button>
-
-                <p id="successMsg" class="success-msg" style="display:none;">تم إرسال طلبك بنجاح</p>
-
-            </form>
-
-        </div>
-    </div>
-
-</main>
-
-
-<footer class="main-footer">
-    <div class="container">
-
-        <div class="footer-logo">
-            <img src="https://i.ibb.co/Vpqp8P3N/image.png" alt="Rawnaq Logo">
+            <div id="policy_content" class="answer">
+                <ol>
+                    <li>يتم قبول الاسترجاع خلال 7 أيام من تاريخ الاستلام.</li>
+                    <li>يجب أن تكون المنتجات غير مستخدمة وبحالها الأصلية.</li>
+                    <li>يتم استرجاع المبلغ بنفس طريقة الدفع.</li>
+                </ol>
+            </div>
         </div>
 
-        <div class="social-links">
-            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://wa.me/966545794428"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="mailto:2240006014@iau.edu.sa"><i class="fa-regular fa-envelope"></i></a>
+        <!-- طلب الاسترجاع -->
+        <div class="card">
+            <button id="form_title_btn" class="question">طلب الاسترجاع</button>
+
+            <div class="answer">
+
+                <form id="returnForm">
+
+                    <div class="form-group">
+                        <label id="lbl_name">الاسم *</label>
+                        <input id="name" type="text">
+                        <small id="nameError" class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="lbl_phone">رقم الجوال *</label>
+                        <input id="phone" type="text" placeholder="05XXXXXXXX">
+                        <small id="phoneError" class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="lbl_order">رقم الطلب *</label>
+                        <input id="orderNumber" type="text" readonly placeholder="سيظهر تلقائيًا">
+                    </div>
+
+                    <div class="form-group">
+                        <label id="lbl_reason">اختر السبب *</label>
+                        <select id="reasonSelect" required>
+                            <option value="" disabled selected id="opt_default">-- اختر السبب --</option>
+                            <option id="opt_size">مقاس غير مناسب</option>
+                            <option id="opt_damaged">منتج تالف</option>
+                            <option id="opt_other">أخرى</option>
+                        </select>
+                    </div>
+
+                    <button id="submit_btn" type="submit">إرسال</button>
+
+                    <p id="successMsg" class="success-msg" style="display:none;">تم إرسال طلبك بنجاح</p>
+
+                </form>
+
+            </div>
         </div>
 
-        <div class="footer-links">
-            <a id="footer_return" href="return.html">الاسترجاع</a>
+    </main>
+
+    <!-- ========== الفوتر الموحد ========== -->
+    <footer class="main-footer">
+        <div class="container">
+
+            <div class="footer-logo">
+                <img src="https://i.ibb.co/Vpqp8P3N/image.png" alt="Rawnaq Logo">
+            </div>
+
+            <div class="social-links">
+                <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/966545794428"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:2240006014@iau.edu.sa"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+
+            <div class="footer-links">
+                <a id="footer_return" href="return.html">الاسترجاع</a>
+            </div>
+
+            <div class="payment-methods">
+                <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" class="pay-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968144.png" class="pay-icon">
+                <img src="https://iconape.com/wp-content/files/sz/20472/png/Mada-01.png" class="pay-icon">
+            </div>
+
+            <p class="copyright">Rawnaq 2026 ©</p>
         </div>
+    </footer>
 
-        <div class="payment-methods">
-            <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" class="pay-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968144.png" class="pay-icon">
-            <img src="https://iconape.com/wp-content/files/sz/20472/png/Mada-01.png" class="pay-icon">
-        </div>
-
-        <p class="copyright">Rawnaq 2026 ©</p>
-    </div>
-</footer>
-
-<script src="return.js"></script>
-<script src="language.js"></script>
+    <script src="return.js"></script>
+    <script src="language.js"></script>
 
 </body>
 </html>

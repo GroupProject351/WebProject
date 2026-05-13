@@ -77,41 +77,6 @@ const translations = {
     prod_name_1: "أساور يد",
     prod_name_2: "طقم رسمي كلاسيك",
     prod_name_3: "معطف أحمر",
-
-    //الاسترجاع
-    return_title_page: "طلبات الاسترجاع",
-    policy_btn: "سياسة الاسترجاع",
-    policy_list: `
-      <ol>
-        <li>يتم قبول الاسترجاع خلال 7 أيام من تاريخ الاستلام.</li>
-        <li>يجب أن تكون المنتجات غير مستخدمة وبحالها الأصلية.</li>
-        <li>يتم استرجاع المبلغ بنفس طريقة الدفع.</li>
-      </ol>`,
-    form_title_btn: "طلب الاسترجاع",
-    lbl_name: "الاسم *",
-    lbl_phone: "رقم الجوال *",
-    lbl_order: "رقم الطلب *",
-    lbl_reason: "اختر السبب *",
-    opt_default: "-- اختر السبب --",
-    opt_size: "مقاس غير مناسب",
-    opt_damaged: "منتج تالف",
-    opt_other: "أخرى",
-    submit_btn: "إرسال",
-    success_msg: "تم إرسال طلبك بنجاح",
-    order_number: "سيظهر تلقائيًا",
-
-    //الدفع
-    payment_title: "إتمام الدفع",
-    cart_contents: "محتويات السلة",
-    clear_cart: "مسح السلة",
-    payment_info: "أدخل بيانات الدفع",
-    pay_now: "ادفع الآن",
-    payment_methods: "طرق الدفع",
-    lbl_pay_name: "الاسم *",
-    lbl_pay_card: "رقم البطاقة *",
-    lbl_pay_phone: "رقم الجوال *",
-    card_placeholder: "1234 5678 9012 3456",
-    phone_placeholder: "05XXXXXXXX",
     },
 
   en: {
@@ -189,42 +154,6 @@ const translations = {
     prod_name_1: "Hand Bracelets",
     prod_name_2: "Classic Formal Set",
     prod_name_3: "Red Coat",
-
-
-    //الاسترجاع
-    return_title_page: "Return Requests",
-    policy_btn: "Return Policy",
-    policy_list: `
-      <ol>
-        <li>Returns are accepted within 7 days of receipt.</li>
-        <li>Products must be unused and in their original condition.</li>
-        <li>Refunds are processed using the original payment method.</li>
-      </ol>`,
-    form_title_btn: "Return Request Form",
-    lbl_name: "Name *",
-    lbl_phone: "Phone Number *",
-    lbl_order: "Order Number *",
-    lbl_reason: "Select Reason *",
-    opt_default: "-- Select Reason --",
-    opt_size: "Size not suitable",
-    opt_damaged: "Damaged product",
-    opt_other: "Other",
-    submit_btn: "Submit",
-    success_msg: "Your request has been sent successfully",
-    order_number: "It will appear automatically.",
-
-    //الدفع
-    payment_title: "Checkout",
-    cart_contents: "Shopping Cart Items",
-    clear_cart: "Clear Cart",
-    payment_info: "Enter Payment Details",
-    pay_now: "Pay Now",
-    payment_methods: "Payment Methods",
-    lbl_pay_name: "Name *",
-    lbl_pay_card: "Card Number *",
-    lbl_pay_phone: "Phone Number *",
-    card_placeholder: "1234 5678 9012 3456",
-    phone_placeholder: "05XXXXXXXX",
     }
 };
 
@@ -238,22 +167,20 @@ function applyLanguage(lang) {
   
   
     //navbar
-  if (document.getElementById("nav_home")) {  
-   document.getElementById("nav_home").textContent =
+  document.getElementById("nav_home").textContent =
     translations[lang].nav_home;
 
-   document.getElementById("nav_about").textContent =
+  document.getElementById("nav_about").textContent =
     translations[lang].nav_about;
 
-   document.getElementById("nav_shop").textContent =
+  document.getElementById("nav_shop").textContent =
     translations[lang].nav_shop;
 
-   document.getElementById("nav_faq").textContent =
+  document.getElementById("nav_faq").textContent =
     translations[lang].nav_faq;
 
-   document.getElementById("nav_return").textContent =
+  document.getElementById("nav_return").textContent =
     translations[lang].nav_return;
-  }
 
  
   
@@ -358,103 +285,27 @@ function applyLanguage(lang) {
 
     // ترجمة المنتج الأول
     if (document.getElementById("prod_name_1")) {
-      document.getElementById("prod_name_1").textContent =
-       translations[lang].prod_name_1;
-      document.getElementById("add_to_cart_1").textContent =
-       translations[lang].add_to_cart;
-      document.getElementById("currency_1").textContent =
-       translations[lang].price_curr;
+      document.getElementById("prod_name_1").textContent = translations[lang].prod_name_1;
+      document.getElementById("add_to_cart_1").textContent = translations[lang].add_to_cart;
+      document.getElementById("currency_1").textContent = translations[lang].price_curr;
     }
 
     // ترجمة المنتج الثاني
     if (document.getElementById("prod_name_2")) {
-      document.getElementById("prod_name_2").textContent =
-       translations[lang].prod_name_2;
-      document.getElementById("add_to_cart_2").textContent =
-       translations[lang].add_to_cart;
-      document.getElementById("currency_2").textContent =
-       translations[lang].price_curr;
+      document.getElementById("prod_name_2").textContent = translations[lang].prod_name_2;
+      document.getElementById("add_to_cart_2").textContent = translations[lang].add_to_cart;
+      document.getElementById("currency_2").textContent = translations[lang].price_curr;
     }
 
     // ترجمة المنتج الثالث
     if (document.getElementById("prod_name_3")) {
-      document.getElementById("prod_name_3").textContent =
-       translations[lang].prod_name_3;
-      document.getElementById("add_to_cart_3").textContent =
-       translations[lang].add_to_cart;
-      document.getElementById("currency_3").textContent =
-       translations[lang].price_curr;
+      document.getElementById("prod_name_3").textContent = translations[lang].prod_name_3;
+      document.getElementById("add_to_cart_3").textContent = translations[lang].add_to_cart;
+      document.getElementById("currency_3").textContent = translations[lang].price_curr;
     }
   }
 
-  // ترجمة صفحة الاسترجاع
-  if (document.getElementById("return_title")) {
-    document.getElementById("return_title").textContent =
-     translations[lang].return_title_page;
-    document.getElementById("policy_btn").textContent =
-     translations[lang].policy_btn;
-    document.getElementById("policy_content").innerHTML =
-     translations[lang].policy_list;
-    document.getElementById("form_title_btn").textContent =
-     translations[lang].form_title_btn;
-    document.getElementById("orderNumber").placeholder =
-     translations[lang].order_number; 
-    
-    // ترجمة مسميات الحقول (Labels)
-    if(document.getElementById("lbl_name")) document.getElementById("lbl_name").textContent =
-     translations[lang].lbl_name;
-    if(document.getElementById("lbl_phone")) document.getElementById("lbl_phone").textContent =
-     translations[lang].lbl_phone;
-    if(document.getElementById("lbl_order")) document.getElementById("lbl_order").textContent =
-     translations[lang].lbl_order;
-    if(document.getElementById("lbl_reason")) document.getElementById("lbl_reason").textContent =
-     translations[lang].lbl_reason;
-
-    // ترجمة خيارات القائمة المنسدلة
-    if(document.getElementById("opt_default")) document.getElementById("opt_default").textContent =
-     translations[lang].opt_default;
-    if(document.getElementById("opt_size")) document.getElementById("opt_size").textContent =
-     translations[lang].opt_size;
-    if(document.getElementById("opt_damaged")) document.getElementById("opt_damaged").textContent =
-     translations[lang].opt_damaged;
-    if(document.getElementById("opt_other")) document.getElementById("opt_other").textContent =
-     translations[lang].opt_other;
-
-    // ترجمة الزر ورسالة النجاح
-    document.getElementById("submit_btn").textContent =
-     translations[lang].submit_btn;
-    document.getElementById("successMsg").textContent =
-     translations[lang].success_msg;
-  }
-
-   // ترجمة صفحة الدفع
-  if (document.getElementById("payment_title")) {
-    document.getElementById("payment_title").textContent =
-     translations[lang].payment_title;
-    document.getElementById("cart_contents_title").textContent =
-     translations[lang].cart_contents;
-    document.getElementById("clear_cart_btn").textContent =
-     translations[lang].clear_cart;
-    document.getElementById("payment_info_title").textContent =
-     translations[lang].payment_info;
-    document.getElementById("pay_now_btn").textContent =
-     translations[lang].pay_now;
-    document.getElementById("payment_methods_title").textContent =
-     translations[lang].payment_methods;
-    document.getElementById("card").placeholder =
-     translations[lang].card_placeholder;
-    document.getElementById("phone").placeholder =
-     translations[lang].phone_placeholder; 
-
-    // ترجمة مسميات الحقول
-    document.getElementById("lbl_pay_name").textContent =
-     translations[lang].lbl_name; 
-    document.getElementById("lbl_pay_card").textContent =
-     translations[lang].lbl_pay_card;
-    document.getElementById("lbl_pay_phone").textContent =
-     translations[lang].lbl_phone; 
-  }  
-
+  
 }
 
 function toggleLanguage() {

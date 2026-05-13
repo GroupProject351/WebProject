@@ -10,7 +10,6 @@ function updateCartCount() {
 }
 updateCartCount();
 
-
 // فتح وإغلاق البوكسات
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
 
 // التحقق من الاسم
 function validateName(name) {
