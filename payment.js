@@ -45,6 +45,14 @@ function renderCart() {
 }
 
 function increase(i) {
+    const MAX_STOCK = 5; // الحد الأقصى
+    
+    if (cart[i].qty >= MAX_STOCK) {
+        // الرسالة المطلوبة
+        alert(`نعتذر، الحد الأقصى للطلب هو ${MAX_STOCK} قطع فقط ❌`);
+        return;
+    }
+    
     cart[i].qty++;
     saveAndRender();
 }
