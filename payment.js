@@ -1,3 +1,10 @@
+const loggedIn = localStorage.getItem('loggedIn_name');
+if (!loggedIn) {
+    document.getElementById('loginOverlay').classList.add('active');
+    document.querySelector('.wrapper').classList.add('active-popup');
+}
+
+
 let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 let total = 0;
 
