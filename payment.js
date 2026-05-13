@@ -27,13 +27,15 @@ function renderCart() {
                     <span>${item.price} ر.س</span>
                 </div>
 
-                <div class="qty-controls">
-                    <button class="qty-btn" onclick="decrease(${index})">-</button>
-                    <span>${item.qty}</span>
-                    <button class="qty-btn" onclick="increase(${index})">+</button>
-                </div>
+                <div class="actions">
+                    <div class="qty-controls">
+                        <button class="qty-btn" onclick="decrease(${index})">-</button>
+                        <span>${item.qty}</span>
+                        <button class="qty-btn" onclick="increase(${index})">+</button>
+                    </div>
 
-                <button class="remove-btn" onclick="removeItem(${index})">حذف</button>
+                    <button class="remove-btn" onclick="removeItem(${index})">حذف</button>
+                </div>
             </div>
         `;
     });
@@ -166,3 +168,4 @@ document.getElementById("paymentForm").addEventListener("submit", function (e) {
 
     alert("تم الدفع بنجاح");
 });
+
