@@ -55,32 +55,39 @@
 
         <!-- فورم الدفع -->
         <div class="card">
-            <h2 class="section-title">أدخل بيانات الدفع</h2>
+    <h2 class="section-title">أدخل بيانات الدفع</h2>
 
-            <form id="paymentForm" novalidate>
+    <form id="paymentForm" novalidate>
 
-                <div class="form-group">
-                    <label>الاسم *</label>
-                    <input type="text" id="name">
-                    <small id="nameError" class="error"></small>
-                </div>
-
-                <div class="form-group">
-                    <label>رقم البطاقة *</label>
-                    <input type="text" id="card" placeholder="1234 5678 9012 3456">
-                    <small id="cardError" class="error"></small>
-                </div>
-
-                <div class="form-group">
-                    <label>رقم الجوال *</label>
-                    <input type="text" id="phone" placeholder="05XXXXXXXX">
-                    <small id="phoneError" class="error"></small>
-                </div>
-
-                <button type="submit" class="submit-btn">ادفع الآن</button>
-
-            </form>
+        <!-- الاسم -->
+        <div class="form-group">
+            <label>الاسم *</label>
+            <p class="example">مثال: لمياء عبدالله اليامي</p>
+            <input type="text" id="name">
+            <small id="nameError" class="error"></small>
         </div>
+
+        <!-- رقم البطاقة -->
+        <div class="form-group">
+            <label>رقم البطاقة *</label>
+            <p class="example">مثال: 1234 5678 9012 3456</p>
+            <input type="text" id="card">
+            <small id="cardError" class="error"></small>
+        </div>
+
+        <!-- رقم الجوال -->
+        <div class="form-group">
+            <label>رقم الجوال *</label>
+            <p class="example">مثال: 05X XXX XXXX</p>
+            <input type="text" id="phone">
+            <small id="phoneError" class="error"></small>
+        </div>
+
+        <button type="submit" class="submit-btn">ادفع الآن</button>
+
+    </form>
+</div>
+
 
         <!-- طرق الدفع -->
         <div class="card">
