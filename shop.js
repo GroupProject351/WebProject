@@ -1,3 +1,14 @@
+function checkLoginBeforeAdd(callback) {
+    const loggedIn = localStorage.getItem('loggedIn_name');
+    if (!loggedIn) {
+        document.getElementById('loginOverlay').classList.add('active');
+        document.querySelector('.wrapper').classList.add('active-popup');
+        return;
+    }
+    callback();
+}
+
+
 // 1. إعداد السلة وتحديث العداد
 let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 
@@ -13,6 +24,8 @@ updateCartCount();
 
 // 2. الدالة الأساسية للإضافة للسلة مع فحص المخزون
 function addToCart(id, name, price, size) {
+
+  checkLoginBeforeAdd(function() {
     
     // تحديد سقف المخزون (مثلاً 5 قطع كحد أقصى لكل منتج/مقاس)
     const MAX_STOCK = 5; 
@@ -48,6 +61,7 @@ function addToCart(id, name, price, size) {
     localStorage.setItem("shoppingCart", JSON.stringify(cart));
     updateCartCount();
     alert(`تمت إضافة ${name} للسلة بنجاح 🛒`);
+  });
 }
 
 // 3. تفعيل زر الملابس عند اختيار مقاس
