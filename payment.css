@@ -115,6 +115,12 @@ input:focus {
     margin-top: 10px;
 }
 
+.example {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
 /* طرق الدفع */
 .logos {
     display: flex;
