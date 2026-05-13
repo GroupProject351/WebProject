@@ -429,42 +429,48 @@ function applyLanguage(lang) {
      translations[lang].success_msg;
   }
 
-   // ترجمة صفحة الدفع
-  if (document.getElementById("payment_title")) {
-    document.getElementById("payment_title").textContent =
-     translations[lang].payment_title;
-    document.getElementById("cart_contents_title").textContent =
-     translations[lang].cart_contents;
-    document.getElementById("clear_cart_btn").textContent =
-     translations[lang].clear_cart;
-    document.getElementById("payment_info_title").textContent =
-     translations[lang].payment_info;
-    document.getElementById("pay_now_btn").textContent =
-     translations[lang].pay_now;
-    document.getElementById("payment_methods_title").textContent =
-     translations[lang].payment_methods;
-     
-     if (document.getElementById("example_1")) {
-    document.getElementById("example_1").textContent =
-     translations[lang].payment_example_name;
-    }
-    if (document.getElementById("example_2")) {
-    document.getElementById("example_2").textContent =
-     translations[lang].payment_example_card;
-    }
-    if (document.getElementById("example_3")) {
-    document.getElementById("example_3").textContent =
-     translations[lang].payment_example_phone;
-    }
+  // ترجمة صفحة الدفع
+if (document.getElementById("payment_title")) {
 
-    // ترجمة مسميات الحقول
+    document.getElementById("payment_title").textContent =
+        translations[lang].payment_title;
+
+    document.getElementById("cart_contents_title").textContent =
+        translations[lang].cart_contents;
+
+    document.getElementById("clear_cart_btn").textContent =
+        translations[lang].clear_cart;
+
+    document.getElementById("payment_info_title").textContent =
+        translations[lang].payment_info;
+
+    document.getElementById("pay_now_btn").textContent =
+        translations[lang].pay_now;
+
+    document.getElementById("payment_methods_title").textContent =
+        translations[lang].payment_methods;
+
+    // الأمثلة
+    document.getElementById("example_1").textContent =
+        translations[lang].payment_example_name;
+
+    document.getElementById("example_2").textContent =
+        translations[lang].payment_example_card;
+
+    document.getElementById("example_3").textContent =
+        translations[lang].payment_example_phone;
+
+    // الليبلز
     document.getElementById("lbl_pay_name").textContent =
-     translations[lang].lbl_name; 
+        translations[lang].lbl_pay_name;
+
     document.getElementById("lbl_pay_card").textContent =
-     translations[lang].lbl_pay_card;
+        translations[lang].lbl_pay_card;
+
     document.getElementById("lbl_pay_phone").textContent =
-     translations[lang].lbl_phone; 
-  }  
+        translations[lang].lbl_pay_phone;
+}
+
 
 }
 
