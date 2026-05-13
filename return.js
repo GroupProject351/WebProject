@@ -10,7 +10,7 @@ function updateCartCount() {
 }
 updateCartCount();
 
-// فتح وإغلاق البوكسات
+/* ================= فتح وإغلاق البوكسات ================= */
 document.addEventListener('DOMContentLoaded', () => {
 
     const buttons = document.querySelectorAll('.question');
@@ -31,17 +31,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+/* ================= VALIDATION (ثنائي اللغة) ================= */
+
 // التحقق من الاسم
 function validateName(name) {
-    if (!name) return "الاسم مطلوب";
-    if (name.length < 3) return "الاسم يجب أن يكون 3 أحرف على الأقل";
+    if (!name)
+        return currentLang === "ar" ? "الاسم مطلوب" : "Name is required";
+
+    if (name.length < 3)
+        return currentLang === "ar"
+            ? "الاسم يجب أن يكون 3 أحرف على الأقل"
+            : "Name must be at least 3 characters";
+
     return "";
 }
 
 // التحقق من رقم الجوال
 function validatePhone(phone) {
-    if (!phone) return "رقم الجوال مطلوب";
-    if (!/^05[0-9]{8}$/.test(phone)) return "رقم الجوال يجب أن يبدأ بـ 05 ويتكون من 10 أرقام";
+    if (!phone)
+        return currentLang === "ar" ? "رقم الجوال مطلوب" : "Phone number is required";
+
+    if (!/^05[0-9]{8}$/.test(phone))
+        return currentLang === "ar"
+            ? "رقم الجوال يجب أن يبدأ بـ 05 ويتكون من 10 أرقام"
+            : "Phone number must start with 05 and be 10 digits";
+
     return "";
 }
 
@@ -56,7 +70,7 @@ function clearError(id) {
     document.getElementById(id + "Error").textContent = "";
 }
 
-// جلب الطلبات من localStorage
+/* ================= جلب الطلبات ================= */
 function getOrdersByPhone(phone) {
     let orders = JSON.parse(localStorage.getItem("orders")) || [];
     return orders.filter(order => order.phone === phone);
@@ -73,7 +87,7 @@ function normalize(str) {
         .toLowerCase();
 }
 
-// عند إدخال رقم الجوال
+/* ================= عند إدخال رقم الجوال ================= */
 document.getElementById("phone").addEventListener("blur", function () {
 
     const phone = this.value.trim();
@@ -93,11 +107,14 @@ document.getElementById("phone").addEventListener("blur", function () {
         const ids = userOrders.map(o => o.orderId);
         document.getElementById("orderNumber").value = ids.join(", ");
     } else {
-        document.getElementById("orderNumber").value = "لا توجد طلبات مسجلة";
+        document.getElementById("orderNumber").value =
+            currentLang === "ar"
+                ? "لا توجد طلبات مسجلة"
+                : "No orders found";
     }
 });
 
-// إرسال الطلب
+/* ================= SUBMIT ================= */
 document.getElementById("returnForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -120,16 +137,24 @@ document.getElementById("returnForm").addEventListener("submit", function (e) {
     const userOrders = getOrdersByPhone(phone);
 
     if (userOrders.length === 0) {
-        alert("لا يوجد سجل طلبات برقم الجوال هذا");
+        alert(currentLang === "ar"
+            ? "لا يوجد سجل طلبات برقم الجوال هذا"
+            : "No orders found for this phone number");
         return;
     }
 
     const matchedOrder = userOrders.find(order => normalize(order.name) === normalize(name));
 
     if (!matchedOrder) {
-        alert("الاسم لا يطابق رقم الجوال المسجل في الطلبات");
+        alert(currentLang === "ar"
+            ? "الاسم لا يطابق رقم الجوال المسجل في الطلبات"
+            : "The name does not match the phone number on record");
         return;
     }
 
-    alert("تم إرسال طلب الاسترجاع بنجاح");
+    alert(currentLang === "ar"
+        ? "تم إرسال طلب الاسترجاع بنجاح"
+        : "Return request submitted successfully");
+
+    document.getElementById("successMsg").style.display = "block";
 });
